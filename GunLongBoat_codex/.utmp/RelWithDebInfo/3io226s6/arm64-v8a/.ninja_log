@@ -1,0 +1,10 @@
+# ninja log v5
+26	1882	8125662060318944	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	2a3c4a2a4ff3a59e
+17	1896	8125662060334505	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	b42a9be61c4998b4
+8	1927	8125662060761961	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	454421b4b86d71fd
+37	1928	8125662060777081	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	b92a4433f6dfc4b7
+12	1993	8125662061415556	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	b4f2a01526ab290c
+31	2065	8125662062173585	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	aab0bee115c9233c
+21	2199	8125662063496015	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	da2a77c54ef8a095
+1	2295	8125662064436941	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	1617e28db8cecc97
+2295	2386	8125662065373933	C:/Users/Administrator/Desktop/hayeun/UnityProjects/GunLongBoat/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3io226s6/obj/arm64-v8a/libgame.so	52745d67bc194af3

@@ -1,0 +1,5 @@
+C:/Users/Administrator/Desktop/hayeun/UnityProjects/GunLongBoat_codex/.utmp/Debug/116g3f6f/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/hayeun/UnityProjects/GunLongBoat_codex/.utmp/Debug/116g3f6f/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/Administrator/Desktop/hayeun/UnityProjects/GunLongBoat_codex/.utmp/Debug/116g3f6f/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/Administrator/Desktop/hayeun/UnityProjects/GunLongBoat_codex/.utmp/Debug/116g3f6f/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/hayeun/UnityProjects/GunLongBoat_codex/.utmp/Debug/116g3f6f/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
