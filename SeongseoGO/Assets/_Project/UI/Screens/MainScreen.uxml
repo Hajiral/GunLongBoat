@@ -1,0 +1,42 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/Styles/Common.uss" />
+    <Style src="project://database/Assets/_Project/UI/Screens/MainScreen.uss" />
+    <ui:VisualElement name="main-screen" class="screen">
+        <ui:VisualElement name="safe-area" class="safe-area">
+            <ui:VisualElement name="content" class="screen__content main__content">
+
+                <!-- 상단 로고 -->
+                <ui:VisualElement name="header" class="main__header">
+                    <ui:VisualElement name="logo" class="main__logo">
+                        <ui:VisualElement name="logo-icon" class="icon-slot main__logo-icon icon--scan icon-tint--white" />
+                    </ui:VisualElement>
+                    <ui:Label name="app-name" text="ANB" class="main__app-name" />
+                </ui:VisualElement>
+
+                <!-- 큰 제목: line-height가 없어 줄마다 Label로 나눈다 -->
+                <ui:VisualElement name="title" class="main__title">
+                    <ui:Label text="캠퍼스" class="text-display" />
+                    <ui:Label text="AR 길찾기" class="text-display" />
+                </ui:VisualElement>
+
+                <ui:Label name="description" text="가까운 거리 안내선으로&#10;교내 목적지를 찾아보세요." class="text-body main__description" />
+
+                <!-- 대표 사진 자리: MainScreen.uss의 .main__hero에 background-image만 지정하면 사진으로 바뀐다 -->
+                <ui:VisualElement name="hero-image" class="image-slot main__hero" />
+
+                <!-- 검색창: MainScreenPresenter가 CampusData에서 강의실을 찾는다 -->
+                <ui:VisualElement name="search-bar" class="search-bar main__search">
+                    <ui:VisualElement name="search-icon" class="icon-slot search-bar__icon icon--search icon-tint--muted" />
+                    <ui:TextField name="search-input" placeholder-text="강의실 검색..." hide-placeholder-on-focus="false" class="search-bar__input" />
+                </ui:VisualElement>
+
+                <!-- 시안에 없는 추가 요소: 강의실 선택으로 가는 링크. 검색 중에는 숨긴다 -->
+                <ui:Label name="browse-buildings" text="건물별로 찾아보기 ›" class="text-semibold main__browse" />
+
+                <!-- 검색 결과: 입력이 있을 때만 보인다 -->
+                <ui:ScrollView name="search-results" class="search-results main__search-results" />
+
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

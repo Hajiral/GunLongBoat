@@ -1,0 +1,62 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/Styles/Common.uss" />
+    <Style src="project://database/Assets/_Project/UI/Screens/DestinationConfirmScreen.uss" />
+    <ui:VisualElement name="destination-confirm-screen" class="screen">
+        <ui:VisualElement name="safe-area" class="safe-area">
+            <ui:VisualElement name="content" class="screen__content">
+
+                <!-- 상단 내비: 뒤로가기는 ScreenManager가 연결 -->
+                <ui:VisualElement name="nav-bar" class="nav-bar">
+                    <ui:Label text="목적지 확인" class="text-nav nav-bar__title" />
+                    <ui:VisualElement name="back-button" class="icon-slot nav-bar__button icon--back icon-tint--strong" />
+                    <ui:VisualElement class="nav-bar__button" />
+                </ui:VisualElement>
+
+                <!-- 추천 배지 -->
+                <ui:VisualElement name="badge" class="destination__badge">
+                    <ui:VisualElement class="icon-circle destination__badge-circle">
+                        <ui:VisualElement name="badge-icon" class="icon-slot destination__badge-icon icon--sparkle icon-tint--primary" />
+                    </ui:VisualElement>
+                    <ui:Label text="다음시간 강의실 안내 추천" class="text-semibold destination__badge-label" />
+                </ui:VisualElement>
+
+                <!-- 큰 제목: 첫 줄은 DestinationConfirmScreenPresenter가 "건물 층"으로 채운다 -->
+                <ui:VisualElement name="title" class="destination__title">
+                    <ui:Label name="title-place" text="건물 층" class="text-title text-title-line destination__title-line" />
+                    <ui:Label text="안내를 드릴까요." class="text-title text-title-line destination__title-line" />
+                </ui:VisualElement>
+
+                <ui:Label name="description" text="강의실 위치와 가장 빠른 이동 경로를&#10;지도로 먼저 확인해 보세요." class="destination__description" />
+
+                <!-- 강의실 사진 자리: background-image만 지정하면 사진으로 바뀐다 -->
+                <ui:VisualElement name="room-photo" class="image-slot destination__photo" />
+
+                <!-- 장소 카드 -->
+                <ui:VisualElement name="place-card" class="card destination__place">
+                    <ui:VisualElement class="icon-circle destination__place-circle">
+                        <ui:VisualElement name="place-icon" class="icon-slot destination__place-icon icon--pin icon-tint--primary" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="destination__place-text">
+                        <ui:Label name="room-name" text="강의실" class="destination__room-name" />
+                        <ui:Label name="room-location" text="건물 층" class="destination__room-location" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- 이동 정보: 거리·시간은 GPS 데이터가 생기면 채운다 -->
+                <ui:VisualElement name="route-info" class="destination__route">
+                    <ui:Label text="도보 이동" class="destination__route-mode" />
+                    <ui:Label name="route-distance" text="—" class="destination__route-distance" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="destination__spacer" />
+
+                <!-- 길 찾기 버튼 → 지도 안내 (DestinationConfirmScreenPresenter) -->
+                <ui:VisualElement name="find-route-button" class="btn-primary destination__button">
+                    <ui:Label text="길 찾기" class="btn-primary__label" />
+                    <ui:VisualElement name="find-route-icon" class="icon-slot btn-primary__icon icon--arrow-right icon-tint--white" />
+                </ui:VisualElement>
+
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

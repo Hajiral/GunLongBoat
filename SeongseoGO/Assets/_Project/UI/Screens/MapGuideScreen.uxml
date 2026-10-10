@@ -1,0 +1,66 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/Styles/Common.uss" />
+    <Style src="project://database/Assets/_Project/UI/Screens/MapGuideScreen.uss" />
+    <ui:VisualElement name="map-guide-screen" class="screen">
+        <ui:VisualElement name="safe-area" class="safe-area">
+
+            <!-- 상단 내비: 뒤로가기는 ScreenManager가 연결. 더보기 동작은 아직 없음 -->
+            <ui:VisualElement class="map-guide__header">
+                <ui:VisualElement name="nav-bar" class="nav-bar">
+                    <ui:Label text="건물까지 지도 안내" class="text-nav nav-bar__title" />
+                    <ui:VisualElement name="back-button" class="icon-slot nav-bar__button icon--back icon-tint--strong" />
+                    <ui:VisualElement name="more-button" class="icon-slot nav-bar__button icon--more icon-tint--strong" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <!-- 지도 영역: 화면 폭 전체 -->
+            <ui:VisualElement name="map" class="map-guide__map">
+                <!-- 지도 자리: background-image만 지정하면 지도 이미지로 바뀐다 -->
+                <ui:VisualElement name="map-image" class="image-slot map-guide__map-image" />
+
+                <!-- 현재 위치: GPS가 연결되면 위치를 옮긴다. 지금은 시안 위치 -->
+                <ui:VisualElement name="current-location" class="map-guide__location">
+                    <ui:VisualElement class="map-guide__location-dot" />
+                </ui:VisualElement>
+
+                <!-- 목적지 핀과 말풍선: 위치는 지도 좌표가 생기면 옮긴다. 지금은 시안 위치 -->
+                <ui:VisualElement name="destination-pin" class="map-guide__pin-group">
+                    <ui:VisualElement class="map-guide__tooltip">
+                        <ui:Label name="pin-room" text="강의실" class="map-guide__tooltip-title" />
+                        <ui:Label name="pin-location" text="건물 층" class="map-guide__tooltip-sub" />
+                    </ui:VisualElement>
+                    <ui:VisualElement class="map-guide__pin">
+                        <ui:VisualElement name="pin-icon" class="icon-slot map-guide__pin-icon icon--pin icon-tint--white" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- 내 위치로 이동 버튼: 동작은 아직 연결하지 않음 -->
+                <ui:VisualElement name="recenter-button" class="map-guide__recenter">
+                    <ui:VisualElement name="recenter-icon" class="icon-slot map-guide__recenter-icon icon--location icon-tint--primary" />
+                </ui:VisualElement>
+
+                <!-- 아래 시트 -->
+                <ui:VisualElement name="route-sheet" class="map-guide__sheet">
+                    <ui:VisualElement class="map-guide__summary">
+                        <ui:VisualElement class="map-guide__mode-icon">
+                            <ui:VisualElement name="walk-icon" class="icon-slot map-guide__mode-icon-slot icon--walk icon-tint--primary" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="map-guide__summary-text">
+                            <ui:Label text="도보 이동" class="map-guide__mode-label" />
+                            <!-- 거리·시간은 GPS 데이터가 생기면 채운다 -->
+                            <ui:Label name="route-time" text="—" class="map-guide__time" />
+                        </ui:VisualElement>
+                        <ui:Label name="route-distance" text="—" class="map-guide__distance" />
+                    </ui:VisualElement>
+
+                    <!-- 길찾기 시작 버튼: GPS 안내 시작 자리 (GPS 연결 전이라 동작 없음) -->
+                    <ui:VisualElement name="start-button" class="btn-primary map-guide__button">
+                        <ui:Label text="길찾기 시작하기" class="btn-primary__label" />
+                        <ui:VisualElement name="start-icon" class="icon-slot btn-primary__icon icon--navigation icon-tint--white" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

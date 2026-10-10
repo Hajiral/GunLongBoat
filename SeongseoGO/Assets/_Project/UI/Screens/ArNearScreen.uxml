@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Template name="ArOverlay" src="project://database/Assets/_Project/UI/Components/ArOverlay.uxml" />
+    <Style src="project://database/Assets/_Project/UI/Styles/Common.uss" />
+    <Style src="project://database/Assets/_Project/UI/Components/ArOverlay.uss" />
+    <Style src="project://database/Assets/_Project/UI/Screens/ArNearScreen.uss" />
+    <!-- 실내 AR 찾기 · 도착 직전: 배경은 투명. 뒤에 AR 카메라 화면이 보인다 -->
+    <ui:VisualElement name="ar-near-screen" class="screen screen--transparent ar-screen ar-screen--near">
+        <ui:VisualElement name="safe-area" class="safe-area">
+            <ui:Instance template="ArOverlay" name="ar-overlay-instance" class="ar-screen__overlay" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

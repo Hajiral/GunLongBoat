@@ -1,0 +1,31 @@
+/* 강의실 선택 화면. 기준: Art/Figma/강의실 선택.png (412 x 915, 상태바 44px 제외) */
+
+.room-select__title {
+    margin-top: 18px;
+}
+
+.room-select__subtitle {
+    margin-top: 7px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.room-select__search {
+    margin-top: 17px;
+}
+
+.room-select__scroll {
+    flex-grow: 1;
+    margin-top: 18px;
+}
+
+.room-select__grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 고른 건물의 층·강의실 목록과 검색 결과 */
+.room-select__list {
+    padding-bottom: var(--space-2xl);
+}

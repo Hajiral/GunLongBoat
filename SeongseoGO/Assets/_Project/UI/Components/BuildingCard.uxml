@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- 건물 카드 한 장. RoomSelectScreenPresenter가 CampusData의 건물마다 복제해 채운다. -->
+    <ui:VisualElement name="building-card" class="building-card">
+        <ui:VisualElement name="photo" class="image-slot building-card__photo" />
+        <ui:VisualElement class="building-card__footer">
+            <ui:Label name="name" text="건물 이름" class="building-card__name" />
+            <ui:VisualElement name="chevron" class="icon-slot building-card__chevron icon--chevron-right icon-tint--muted" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

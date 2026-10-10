@@ -1,0 +1,35 @@
+/* 건물 카드. 기준: Art/Figma/강의실 선택.png (카드 176 x 158) */
+
+.building-card {
+    width: 48.35%; /* 2열: (364 - 12) / 2 = 176px */
+    margin-bottom: var(--space-md);
+    border-width: 1px;
+    border-color: var(--color-border);
+    border-radius: var(--card-radius);
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+.building-card__photo {
+    height: 111px;
+}
+
+.building-card__footer {
+    height: 45px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 9px;
+}
+
+.building-card__name {
+    font-size: var(--font-size-label);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.building-card__chevron {
+    width: 16px;
+    height: 16px;
+}

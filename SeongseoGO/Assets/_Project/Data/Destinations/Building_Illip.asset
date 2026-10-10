@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff4dbd209147467bbcefc765bfcee3f, type: 3}
+  m_Name: Building_Illip
+  m_EditorClassIdentifier: Assembly-CSharp::SeongseoGO.Data.BuildingData
+  buildingName: "\uC77C\uB9BD\uAD00"
+  hasEntranceGps: 0
+  entranceLatitude: 0
+  entranceLongitude: 0
+  floors:
+  - floorName: "\uC9C0\uD558 1\uCE35"
+    rooms:
+    - roomName: "\uC77C101"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC77C102"
+      indoorRoute: {fileID: 0}
+  - floorName: "3\uCE35"
+    rooms:
+    - roomName: "\uC218\uC5C5\uD589\uB3D9\uBD84\uC11D\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBAA8\uC758\uC218\uC5C5\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBA40\uD2F0\uBBF8\uB514\uC5B4\uC81C\uC791\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC601\uC720\uC544 \uAD50\uACFC\uAD50\uC721\uC2E4\uC2B5\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uCC38\uAD00\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC601\uC720\uC544 \uC2E0\uCCB4\uD65C\uB3D9\uC2E4\uC2B5\uC2E4"
+      indoorRoute: {fileID: 0}
+  - floorName: "4\uCE35"
+    rooms:
+    - roomName: "\uC77C405"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uAE30\uCD08\uAC04\uD638\uC2E4\uC2B5\uC2E4"
+      indoorRoute: {fileID: 0}
+  - floorName: "5\uCE35"
+    rooms:
+    - roomName: "\uC77C501"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC77C503"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC77C505"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC77C507"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uC77C509"
+      indoorRoute: {fileID: 0}

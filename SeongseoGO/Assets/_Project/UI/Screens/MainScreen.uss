@@ -1,0 +1,66 @@
+/* 메인 화면. 기준: Art/Figma/메인 화면.png (412 x 915, 상태바 44px 제외) */
+
+.main__header {
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    margin-top: 7px;
+}
+
+.main__logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    justify-content: center;
+    align-items: center;
+}
+
+.main__logo-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.main__app-name {
+    margin-left: 7px;
+    font-size: 15px;
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.main__title {
+    margin-top: 29px;
+}
+
+.main__description {
+    margin-top: 14px;
+}
+
+/* 대표 사진 자리. 사진이 생기면 아래 주석처럼 background-image만 추가한다.
+   background-image: url("/Assets/_Project/Art/Photos/main_hero.png"); */
+.main__hero {
+    height: 194px;
+    margin-top: 22px;
+    border-radius: var(--image-radius);
+}
+
+.main__search {
+    margin-top: 20px;
+}
+
+/* 검색 결과: 검색창 아래 남은 공간에 스크롤 목록 */
+.main__search-results {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+/* 시안에 없는 추가 요소: 강의실 선택으로 가는 링크 */
+.main__browse {
+    align-self: center;
+    margin-top: var(--space-lg);
+    padding: var(--space-sm);
+    font-size: 13px;
+    color: var(--color-primary);
+}

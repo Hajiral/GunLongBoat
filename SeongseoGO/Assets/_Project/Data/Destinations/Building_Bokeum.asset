@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff4dbd209147467bbcefc765bfcee3f, type: 3}
+  m_Name: Building_Bokeum
+  m_EditorClassIdentifier: Assembly-CSharp::SeongseoGO.Data.BuildingData
+  buildingName: "\uBCF5\uC74C\uAD00"
+  hasEntranceGps: 0
+  entranceLatitude: 0
+  entranceLongitude: 0
+  floors:
+  - floorName: "3\uCE35"
+    rooms:
+    - roomName: "\uBCF5301"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBCF5303"
+      indoorRoute: {fileID: 0}
+  - floorName: "4\uCE35"
+    rooms:
+    - roomName: "\uBCF5401"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBCF5403"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBCF5405"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBCF5407"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uBCF5409"
+      indoorRoute: {fileID: 0}

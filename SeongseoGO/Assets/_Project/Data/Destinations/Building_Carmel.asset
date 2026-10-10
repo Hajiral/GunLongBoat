@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff4dbd209147467bbcefc765bfcee3f, type: 3}
+  m_Name: Building_Carmel
+  m_EditorClassIdentifier: Assembly-CSharp::SeongseoGO.Data.BuildingData
+  buildingName: "\uAC08\uBA5C\uAD00"
+  hasEntranceGps: 0
+  entranceLatitude: 0
+  entranceLongitude: 0
+  floors:
+  - floorName: "\uC9C0\uD558 1\uCE35"
+    rooms:
+    - roomName: "\uAD50\uC591\uC815\uBCF42\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uAD50\uC591\uC815\uBCF43\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uAD50\uC591\uC815\uBCF44\uC2E4"
+      indoorRoute: {fileID: 0}
+  - floorName: "1\uCE35"
+    rooms:
+    - roomName: "AI\uC735\uD569\uC2E4\uC2B51\uC2E4"
+      indoorRoute: {fileID: 0}
+  - floorName: "2\uCE35"
+    rooms:
+    - roomName: "AI\uC735\uD569\uC2E4\uC2B52\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "AI\uC735\uD569\uC2E4\uC2B53\uC2E4"
+      indoorRoute: {fileID: 0}
+    - roomName: "AI\uC735\uD569\uC2E4\uC2B54\uC2E4"
+      indoorRoute: {fileID: 0}
+  - floorName: "3\uCE35"
+    rooms:
+    - roomName: "\uAC08301"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uAC08303"
+      indoorRoute: {fileID: 0}
+    - roomName: "\uAC08305"
+      indoorRoute: {fileID: 0}

@@ -1,0 +1,130 @@
+/* 도착 확인 화면. 기준: Art/Figma/도착 확인.png (412 x 915, 상태바 44px 제외) */
+
+.arrived__content {
+    align-items: center;
+}
+
+/* 파란 체크 원: 지름 76, 시안 y84 */
+.arrived__check-circle {
+    width: 76px;
+    height: 76px;
+    margin-top: 40px;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-primary);
+    justify-content: center;
+    align-items: center;
+}
+
+.arrived__check-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.arrived__title {
+    margin-top: 16px;
+    font-size: 28px;
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.arrived__description {
+    margin-top: 7px;
+    font-size: 14px;
+    color: var(--color-text-body);
+    -unity-text-align: upper-center;
+    -unity-paragraph-spacing: 24px; /* em/100 단위. 14px에서 약 3.3px 추가 → 줄 간격 20px */
+}
+
+/* 위치 칩: 연한 파란 알약 */
+.arrived__chip {
+    align-self: center;
+    height: 33px;
+    margin-top: 18px;
+    border-radius: 16.5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.arrived__chip-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
+.arrived__chip-label {
+    font-size: 12px;
+    -unity-font-style: bold;
+    color: var(--color-primary);
+}
+
+/* ---------- 강의실 사진 카드 ---------- */
+.arrived__card {
+    align-self: stretch;
+    margin-top: 118px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.arrived__photo {
+    height: 205px;
+}
+
+.arrived__card-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    padding-left: 16px;
+    padding-right: 15px;
+}
+
+.arrived__card-name {
+    font-size: var(--font-size-label);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.arrived__card-room {
+    margin-top: 3px;
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+}
+
+/* 도착 완료 배지: 연한 초록 알약 */
+.arrived__done {
+    flex-direction: row;
+    align-items: center;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 11px;
+    border-radius: 12.5px;
+    background-color: var(--color-success-soft);
+}
+
+.arrived__done-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+.arrived__done-label {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--color-success);
+}
+
+/* ---------- 하단 ---------- */
+.arrived__spacer {
+    flex-grow: 1;
+}
+
+.arrived__button {
+    align-self: stretch;
+}
+
+.arrived__link {
+    margin-top: 12px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    color: var(--color-text-muted);
+}

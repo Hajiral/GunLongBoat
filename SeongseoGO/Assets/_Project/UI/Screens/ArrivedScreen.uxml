@@ -1,0 +1,50 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/Styles/Common.uss" />
+    <Style src="project://database/Assets/_Project/UI/Screens/ArrivedScreen.uss" />
+    <ui:VisualElement name="arrived-screen" class="screen">
+        <ui:VisualElement name="safe-area" class="safe-area">
+            <ui:VisualElement name="content" class="screen__content arrived__content">
+
+                <!-- 시안의 색종이 장식은 장식 이미지라 넣지 않음 -->
+                <ui:VisualElement class="arrived__check-circle">
+                    <ui:VisualElement name="check-icon" class="icon-slot arrived__check-icon icon--check icon-tint--white" />
+                </ui:VisualElement>
+
+                <ui:Label text="도착했어요!" class="arrived__title" />
+                <!-- ArrivedScreenPresenter가 "건물 층 강의실에 / 무사히 도착했습니다."로 채운다 -->
+                <ui:Label name="description" text="건물 층 강의실에&#10;무사히 도착했습니다." class="arrived__description" />
+
+                <!-- 위치 칩 -->
+                <ui:VisualElement class="chip arrived__chip">
+                    <ui:VisualElement name="place-icon" class="icon-slot arrived__chip-icon icon--pin icon-tint--primary" />
+                    <ui:Label name="place-chip" text="건물 · 층 강의실" class="arrived__chip-label" />
+                </ui:VisualElement>
+
+                <!-- 강의실 사진 카드 -->
+                <ui:VisualElement name="room-card" class="card arrived__card">
+                    <ui:VisualElement name="room-photo" class="image-slot arrived__photo" />
+                    <ui:VisualElement class="arrived__card-footer">
+                        <ui:VisualElement>
+                            <ui:Label name="card-building" text="건물" class="arrived__card-name" />
+                            <ui:Label name="card-room" text="층 · 강의실" class="arrived__card-room" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="arrived__done">
+                            <ui:VisualElement name="done-icon" class="icon-slot arrived__done-icon icon--check icon-tint--success" />
+                            <ui:Label text="도착 완료" class="arrived__done-label" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement class="arrived__spacer" />
+
+                <!-- 홈 버튼 → 메인, 다른 목적지 링크 → 강의실 선택 (ArrivedScreenPresenter) -->
+                <ui:VisualElement name="home-button" class="btn-primary arrived__button">
+                    <ui:Label text="홈 화면으로 돌아가기" class="btn-primary__label" />
+                    <ui:VisualElement name="home-icon" class="icon-slot btn-primary__icon icon--home icon-tint--white" />
+                </ui:VisualElement>
+                <ui:Label name="other-destination" text="다른 목적지 찾아보기" class="text-semibold arrived__link" />
+
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

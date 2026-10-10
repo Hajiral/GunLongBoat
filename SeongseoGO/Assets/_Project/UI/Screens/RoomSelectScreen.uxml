@@ -1,0 +1,41 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/UI/Styles/Common.uss" />
+    <Style src="project://database/Assets/_Project/UI/Components/BuildingCard.uss" />
+    <Style src="project://database/Assets/_Project/UI/Screens/RoomSelectScreen.uss" />
+    <ui:VisualElement name="room-select-screen" class="screen">
+        <ui:VisualElement name="safe-area" class="safe-area">
+            <ui:VisualElement name="content" class="screen__content">
+
+                <!-- 상단 내비: 뒤로가기는 ScreenManager가 연결 (강의실 목록이 열려 있으면 건물 목록으로) -->
+                <ui:VisualElement name="nav-bar" class="nav-bar">
+                    <ui:Label text="강의실 선택" class="text-nav nav-bar__title" />
+                    <ui:VisualElement name="back-button" class="icon-slot nav-bar__button icon--back icon-tint--strong" />
+                    <ui:VisualElement class="nav-bar__button" />
+                </ui:VisualElement>
+
+                <!-- 큰 제목: line-height가 없어 줄마다 Label로 나눈다 -->
+                <ui:VisualElement name="title" class="room-select__title">
+                    <ui:Label text="학교 건물 강의실을" class="text-title text-title-line" />
+                    <ui:Label text="알려주세요." class="text-title text-title-line" />
+                </ui:VisualElement>
+
+                <ui:Label name="subtitle" text="찾으시는 건물을 선택해 주세요." class="room-select__subtitle" />
+
+                <!-- 검색창: 입력하면 아래 목록 대신 검색 결과가 보인다 -->
+                <ui:VisualElement name="search-bar" class="search-bar room-select__search">
+                    <ui:VisualElement name="search-icon" class="icon-slot search-bar__icon icon--search icon-tint--muted" />
+                    <ui:TextField name="search-input" placeholder-text="강의실 검색..." hide-placeholder-on-focus="false" class="search-bar__input" />
+                </ui:VisualElement>
+
+                <!-- RoomSelectScreenPresenter가 셋 중 하나만 보여준다:
+                     건물 카드(CampusData에서 자동 생성) / 고른 건물의 층·강의실 목록 / 검색 결과 -->
+                <ui:ScrollView name="building-scroll" class="room-select__scroll" vertical-scroller-visibility="Hidden" horizontal-scroller-visibility="Hidden">
+                    <ui:VisualElement name="building-grid" class="room-select__grid" />
+                    <ui:VisualElement name="room-list" class="room-select__list" />
+                    <ui:VisualElement name="search-results" class="room-select__list" />
+                </ui:ScrollView>
+
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

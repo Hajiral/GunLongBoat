@@ -1,0 +1,7 @@
+/* 실내 AR 찾기 · 도착 직전 화면. 기준: Art/Figma/실내 AR 찾기 · 도착 직전.png
+   오버레이 배치는 UI/Components/ArOverlay.uss를 같이 쓴다.
+   도착 직전 안내. 시안 거리 예시 5m. 방향 표시 안쪽 그림은 아직 빈 자리라 이 화면만의 스타일은 없다.
+   나중에 방향 그림이 생기면 .ar-screen--near .ar-overlay__direction-graphic 에 지정한다. */
+
+.ar-screen--near {
+}

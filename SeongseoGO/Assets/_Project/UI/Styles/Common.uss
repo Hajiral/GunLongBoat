@@ -1,0 +1,377 @@
+/*
+ * 성서대 GO 공통 스타일
+ * 기준: Art/Figma 시안 PNG (412 x 915). 값은 모두 412 폭 기준 px.
+ * 다른 화면 USS에서도 이 변수와 클래스를 같이 쓴다.
+ */
+
+:root {
+    /* ---------- 색상 ---------- */
+    --color-primary: #0567D9;          /* 메인 파란색: 버튼, 로고, 강조 글자 */
+    --color-primary-soft: #EAF3FF;     /* 연한 파란 배경: 배지, 칩, 아이콘 원 */
+    --color-on-primary: #FFFFFF;       /* 파란 배경 위 글자 */
+    --color-background: #FFFFFF;       /* 화면 배경 */
+    --color-surface-muted: #EEF2F7;    /* 검색창, 회색 칩 배경 */
+    --color-text-strong: #111827;      /* 제목 */
+    --color-text-body: #485569;        /* 본문, 설명 */
+    --color-text-muted: #7A879A;       /* 보조 글자, 검색창 안내 문구 */
+    --color-success: #33B97A;          /* 도착 완료 글자 */
+    --color-success-soft: #EAF9F2;     /* 도착 완료 배경 */
+    --color-danger: #FF554F;           /* 목적지 핀 */
+    --color-image-placeholder: #D9D9D9;/* 사진 자리 */
+    --color-border: #DDE4EE;           /* 카드 테두리 */
+    --color-map-background: #F2F5F7;   /* 지도 배경 */
+    --color-location-halo: #C6DCF4;    /* 현재 위치 점 둘레 */
+    --color-ar-control: rgba(30, 33, 37, 0.8); /* AR 화면 위 어두운 원형 버튼 */
+
+    /* ---------- 글자 크기 ---------- */
+    --font-size-display: 32px;   /* 메인 큰 제목 */
+    --font-size-title: 23px;     /* 화면 큰 제목 (강의실 선택 기준) */
+    --font-size-nav: 17px;       /* 상단 내비 제목 */
+    --font-size-body: 15px;      /* 본문, 설명 */
+    --font-size-label: 14px;     /* 버튼 아닌 카드 제목, 칩, 검색 안내 문구 */
+    --font-size-button: 16px;    /* 메인 버튼 글자 */
+    --font-size-caption: 12px;   /* 층·호수 같은 작은 글씨 */
+    --line-height-display: 34px; /* UI Toolkit에 line-height가 없어 줄마다 높이로 맞춘다 */
+    --line-height-title: 29px;
+    /* 본문 줄바꿈(\n) 사이 추가 간격. 단위가 px가 아니라 글자 크기의 1/100(em/100)로 동작한다.
+       15px에서 27 → 약 4px 추가 → Pretendard 기본 18px + 4 = 시안 22px */
+    --paragraph-spacing-body: 27px;
+
+    /* ---------- 모양 ---------- */
+    --button-height: 54px;
+    --button-radius: 14px;
+    --input-height: 48px;
+    --input-radius: 14px;
+    --card-radius: 12px;
+    --image-radius: 20px;
+    --pill-radius: 100px;        /* 원(가로=세로) 전용. 가로로 긴 알약에 쓰면 타원이 되므로 높이의 절반을 직접 쓴다 */
+    --sheet-radius: 24px;        /* 아래에서 올라오는 시트의 위 모서리 */
+
+    /* ---------- 여백·간격 ---------- */
+    --space-screen-x: 24px;      /* 화면 좌우 여백. 모든 화면 공통 */
+    --nav-bar-height: 48px;
+    --nav-icon-size: 24px;
+    --space-screen-bottom: 24px; /* 하단 버튼 아래 여백 */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 20px;
+    --space-2xl: 24px;
+    --space-3xl: 32px;
+}
+
+/* Unity 기본 테마의 Label 여백을 없애 시안 수치를 그대로 쓰게 한다 */
+Label {
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+/* ---------- 화면 틀 ---------- */
+.screen {
+    flex-grow: 1;
+    background-color: var(--color-background);
+    /* Pretendard Regular. bold는 이 에셋의 굵기 표로 Pretendard-Bold가 쓰인다. */
+    -unity-font-definition: url("/Assets/_Project/Art/Fonts/Pretendard-Regular_SDF.asset");
+    color: var(--color-text-strong);
+    font-size: var(--font-size-body);
+}
+
+/* AR 화면처럼 카메라 화면 위에 오버레이만 올릴 때 */
+.screen--transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* SafeAreaApplier가 padding을 넣는 영역 */
+.safe-area {
+    flex-grow: 1;
+}
+
+.screen__content {
+    flex-grow: 1;
+    padding-left: var(--space-screen-x);
+    padding-right: var(--space-screen-x);
+}
+
+/* ---------- 글자 ---------- */
+.text-display {
+    font-size: var(--font-size-display);
+    height: var(--line-height-display);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+    overflow: visible;
+}
+
+.text-title {
+    font-size: var(--font-size-title);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.text-title-line {
+    height: var(--line-height-title);
+    overflow: visible;
+}
+
+.text-nav {
+    font-size: var(--font-size-nav);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.text-body {
+    font-size: var(--font-size-body);
+    color: var(--color-text-body);
+    -unity-paragraph-spacing: var(--paragraph-spacing-body);
+}
+
+.text-label {
+    font-size: var(--font-size-label);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.text-caption {
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+}
+
+/* 굵기 600이 필요한 글자에 붙인다 */
+.text-semibold {
+    -unity-font-definition: url("/Assets/_Project/Art/Fonts/Pretendard-SemiBold_SDF.asset");
+    -unity-font-style: normal;
+}
+
+/* ---------- 상단 내비 바 ---------- */
+.nav-bar {
+    height: var(--nav-bar-height);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.nav-bar__button {
+    width: var(--nav-icon-size);
+    height: var(--nav-icon-size);
+}
+
+/* 좌우 버튼과 상관없이 가운데 정렬 */
+.nav-bar__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    -unity-text-align: middle-center;
+}
+
+/* ---------- 버튼 ---------- */
+.btn-primary {
+    height: var(--button-height);
+    border-radius: var(--button-radius);
+    background-color: var(--color-primary);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(--space-2xl);
+    padding-right: var(--space-2xl);
+    border-width: 0;
+}
+
+.btn-primary__label {
+    font-size: var(--font-size-button);
+    -unity-font-style: bold;
+    color: var(--color-on-primary);
+}
+
+.btn-primary__icon {
+    width: 16px;
+    height: 16px;
+    margin-left: var(--space-sm);
+}
+
+/* ---------- 카드 ---------- */
+/* 시안의 그림자는 USS가 지원하지 않아 1px 테두리로 대신한다 */
+.card {
+    background-color: var(--color-background);
+    border-width: 1px;
+    border-color: var(--color-border);
+    border-radius: var(--card-radius);
+}
+
+/* 연한 파란 원 안의 아이콘 자리. 크기는 쓰는 곳에서 width/height로 정한다 */
+.icon-circle {
+    flex-shrink: 0;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-primary-soft);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- 검색창 ---------- */
+.search-bar {
+    height: var(--input-height);
+    border-radius: var(--input-radius);
+    background-color: var(--color-surface-muted);
+    flex-direction: row;
+    align-items: center;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.search-bar__icon {
+    width: 16px;
+    height: 16px;
+    margin-right: var(--space-md);
+}
+
+.search-bar__placeholder {
+    font-size: var(--font-size-label);
+    color: var(--color-text-muted);
+}
+
+/* 검색 입력칸: Unity 기본 TextField 테두리·배경을 없애고 검색창 모양에 맞춘다 */
+.search-bar__input {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar__input .unity-base-text-field__input {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: var(--font-size-label);
+    color: var(--color-text-strong);
+}
+
+.search-bar__input .unity-base-text-field__input--placeholder,
+.search-bar__input .unity-text-element--placeholder {
+    color: var(--color-text-muted);
+}
+
+/* ---------- 목록 (검색 결과, 층·강의실 목록) ---------- */
+.list-row {
+    flex-direction: row;
+    align-items: center;
+    min-height: 52px;
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    border-bottom-width: 1px;
+    border-color: var(--color-border);
+}
+
+.list-row__texts {
+    flex-grow: 1;
+}
+
+.list-row__title {
+    font-size: var(--font-size-label);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.list-row__subtitle {
+    margin-top: 2px;
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+}
+
+.list-row__chevron {
+    width: 16px;
+    height: 16px;
+}
+
+.list-section-title {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xs);
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: var(--color-primary);
+}
+
+.list-empty {
+    margin-top: var(--space-xl);
+    font-size: var(--font-size-label);
+    color: var(--color-text-muted);
+    -unity-text-align: upper-center;
+}
+
+/* ---------- 칩 ---------- */
+.chip {
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    border-radius: 14px; /* 알약: 쓰는 곳에서 높이의 절반으로 덮어쓴다 */
+    background-color: var(--color-primary-soft);
+    padding-top: var(--space-xs);
+    padding-bottom: var(--space-xs);
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+}
+
+/* ---------- 사진·아이콘 자리 ---------- */
+/* 사진이 아직 없으면 회색 박스. background-image만 지정하면 같은 크기로 사진이 채워진다. */
+.image-slot {
+    background-color: var(--color-image-placeholder);
+    -unity-background-scale-mode: scale-and-crop;
+    overflow: hidden;
+}
+
+/* 아이콘이 아직 없으면 빈 자리. background-image만 지정하면 아이콘이 들어간다. */
+.icon-slot {
+    flex-shrink: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+/* ---------- 아이콘 ----------
+   그림: Art/Icons/<이름>.png (흰 선, 투명 배경). 같은 이름으로 덮어쓰면 그대로 바뀐다.
+   색: .icon-tint--* 클래스로 흰 선에 색을 입힌다. */
+.icon--back { background-image: url("/Assets/_Project/Art/Icons/back.png"); }
+.icon--chevron-right { background-image: url("/Assets/_Project/Art/Icons/chevron-right.png"); }
+.icon--close { background-image: url("/Assets/_Project/Art/Icons/close.png"); }
+.icon--search { background-image: url("/Assets/_Project/Art/Icons/search.png"); }
+.icon--location { background-image: url("/Assets/_Project/Art/Icons/location.png"); }
+.icon--pin { background-image: url("/Assets/_Project/Art/Icons/pin.png"); }
+.icon--walk { background-image: url("/Assets/_Project/Art/Icons/walk.png"); }
+.icon--home { background-image: url("/Assets/_Project/Art/Icons/home.png"); }
+.icon--camera { background-image: url("/Assets/_Project/Art/Icons/camera.png"); }
+.icon--check { background-image: url("/Assets/_Project/Art/Icons/check.png"); }
+.icon--sound { background-image: url("/Assets/_Project/Art/Icons/sound.png"); }
+.icon--more { background-image: url("/Assets/_Project/Art/Icons/more.png"); }
+.icon--arrow-right { background-image: url("/Assets/_Project/Art/Icons/arrow-right.png"); }
+.icon--sparkle { background-image: url("/Assets/_Project/Art/Icons/sparkle.png"); }
+.icon--navigation { background-image: url("/Assets/_Project/Art/Icons/navigation.png"); }
+.icon--scan { background-image: url("/Assets/_Project/Art/Icons/scan.png"); }
+
+.icon-tint--strong { -unity-background-image-tint-color: var(--color-text-strong); }
+.icon-tint--body { -unity-background-image-tint-color: var(--color-text-body); }
+.icon-tint--muted { -unity-background-image-tint-color: var(--color-text-muted); }
+.icon-tint--primary { -unity-background-image-tint-color: var(--color-primary); }
+.icon-tint--success { -unity-background-image-tint-color: var(--color-success); }
+.icon-tint--white { -unity-background-image-tint-color: var(--color-on-primary); }
+
+/* ---------- 임시: GPS·AR 연결 전 확인용 ----------
+   ScreenManager의 '임시 진행 켜기(debugAdvance)'가 켜져 있을 때만 지도 안내·AR 화면에 생긴다.
+   GPS·AR이 연결되면 체크를 끄고, 이 스타일과 ScreenPresenter.AddDebugNextButton을 지운다. */
+.debug-next {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    height: 32px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 16px;
+    background-color: #FF8A00;
+    justify-content: center;
+}
+
+.debug-next__label {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: #FFFFFF;
+}

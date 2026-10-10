@@ -1,0 +1,114 @@
+/* 목적지 확인 화면. 기준: Art/Figma/목적지 확인.png (412 x 915, 상태바 44px 제외) */
+
+/* ---------- 추천 배지 ---------- */
+.destination__badge {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.destination__badge-circle {
+    width: 28px;
+    height: 28px;
+}
+
+.destination__badge-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.destination__badge-label {
+    margin-left: 9px;
+    font-size: 13px;
+    color: var(--color-primary);
+}
+
+/* ---------- 제목·설명 ---------- */
+.destination__title {
+    margin-top: 12px;
+}
+
+/* 이 화면은 제목 줄 간격이 30px */
+.destination__title-line {
+    height: 30px;
+}
+
+.destination__description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--color-text-body);
+    -unity-paragraph-spacing: 24px; /* em/100 단위. 14px에서 약 3.3px 추가 → 줄 간격 20px */
+}
+
+/* ---------- 사진 ---------- */
+.destination__photo {
+    height: 250px;
+    margin-top: 19px;
+    border-radius: var(--image-radius);
+}
+
+/* ---------- 장소 카드 ---------- */
+.destination__place {
+    flex-direction: row;
+    align-items: center;
+    height: 51px;
+    margin-top: 18px;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.destination__place-circle {
+    width: 30px;
+    height: 30px;
+}
+
+.destination__place-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.destination__place-text {
+    margin-left: 10px;
+}
+
+.destination__room-name {
+    font-size: var(--font-size-label);
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.destination__room-location {
+    margin-top: 2px;
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+}
+
+/* ---------- 이동 정보 ---------- */
+.destination__route {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.destination__route-mode {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: var(--color-text-body);
+}
+
+.destination__route-distance {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: var(--color-primary);
+}
+
+/* ---------- 하단 버튼 ---------- */
+.destination__spacer {
+    flex-grow: 1;
+}
+
+.destination__button {
+    margin-bottom: var(--space-screen-bottom);
+}

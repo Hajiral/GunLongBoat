@@ -1,0 +1,170 @@
+/* 건물까지 지도 안내 화면. 기준: Art/Figma/건물까지 지도 안내.png (412 x 915, 상태바 44px 제외)
+   지도 위 요소 위치는 지도 영역(시안 y96) 왼쪽 위 기준 */
+
+.map-guide__header {
+    padding-left: var(--space-screen-x);
+    padding-right: var(--space-screen-x);
+}
+
+/* ---------- 지도 ---------- */
+.map-guide__map {
+    flex-grow: 1;
+    margin-top: 4px;
+    overflow: hidden;
+}
+
+.map-guide__map-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-map-background);
+}
+
+/* 현재 위치: 지름 38 둘레 + 10 점, 중심 (236.5, 612.5) */
+.map-guide__location {
+    position: absolute;
+    left: 218px;
+    top: 594px;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-location-halo);
+    justify-content: center;
+    align-items: center;
+}
+
+.map-guide__location-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-primary);
+}
+
+/* 목적지 핀 묶음: 가로 중심 x328.5, 말풍선 위쪽 y80 */
+.map-guide__pin-group {
+    position: absolute;
+    left: 328.5px;
+    top: 80px;
+    translate: -50% 0;
+    align-items: center;
+}
+
+.map-guide__tooltip {
+    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-left: 11px;
+    padding-right: 11px;
+    border-radius: 8px;
+    background-color: var(--color-background);
+    align-items: center;
+}
+
+.map-guide__tooltip-title {
+    font-size: 11px;
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.map-guide__tooltip-sub {
+    margin-top: -2px;
+    font-size: 10px;
+    color: var(--color-text-muted);
+}
+
+.map-guide__pin {
+    width: 36px;
+    height: 36px;
+    margin-top: 5px;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-danger);
+    justify-content: center;
+    align-items: center;
+}
+
+.map-guide__pin-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* 내 위치 버튼: 지름 46, 오른쪽 18, 시트 위 75px */
+.map-guide__recenter {
+    position: absolute;
+    right: 18px;
+    bottom: 226px;
+    width: 46px;
+    height: 46px;
+    border-radius: var(--pill-radius);
+    background-color: var(--color-background);
+    border-width: 1px; /* 시안의 그림자 대신 */
+    border-color: var(--color-border);
+    justify-content: center;
+    align-items: center;
+}
+
+.map-guide__recenter-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---------- 아래 시트 ---------- */
+.map-guide__sheet {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 19px;
+    padding-bottom: var(--space-screen-bottom);
+    padding-left: var(--space-screen-x);
+    padding-right: var(--space-screen-x);
+    border-top-left-radius: var(--sheet-radius);
+    border-top-right-radius: var(--sheet-radius);
+    background-color: var(--color-background);
+}
+
+.map-guide__summary {
+    flex-direction: row;
+    align-items: center;
+}
+
+.map-guide__mode-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--card-radius);
+    background-color: var(--color-primary-soft);
+    justify-content: center;
+    align-items: center;
+}
+
+.map-guide__mode-icon-slot {
+    width: 20px;
+    height: 20px;
+}
+
+.map-guide__summary-text {
+    flex-grow: 1;
+    margin-left: 11px;
+}
+
+.map-guide__mode-label {
+    font-size: var(--font-size-caption);
+    color: var(--color-text-muted);
+}
+
+.map-guide__time {
+    margin-top: 2px;
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: var(--color-text-strong);
+}
+
+.map-guide__distance {
+    font-size: 13px;
+    -unity-font-style: bold;
+    color: var(--color-primary);
+}
+
+.map-guide__button {
+    margin-top: 15px;
+}

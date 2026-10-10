@@ -1,0 +1,40 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <!-- AR 길찾기 공통 오버레이. 배경은 투명이고 뒤에 AR 카메라 화면이 보인다.
+         바닥 화살표·안내선은 AR에서 3D로 그리므로 여기에 넣지 않는다. -->
+    <ui:VisualElement name="ar-overlay" class="ar-overlay">
+
+        <!-- 상단 바: 닫기 → 도착 후 시작 (ArScreenPresenter). 소리 동작은 아직 없음 -->
+        <ui:VisualElement class="ar-overlay__top-bar">
+            <ui:Label text="AR 길찾기" class="ar-overlay__title" />
+            <ui:VisualElement name="close-button" class="ar-overlay__round-button">
+                <ui:VisualElement name="close-icon" class="icon-slot ar-overlay__round-icon icon--close icon-tint--white" />
+            </ui:VisualElement>
+            <ui:VisualElement name="sound-button" class="ar-overlay__round-button">
+                <ui:VisualElement name="sound-icon" class="icon-slot ar-overlay__round-icon icon--sound icon-tint--white" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- 남은 거리: AR 경로가 연결되면 채운다 -->
+        <ui:VisualElement name="distance-pill" class="ar-overlay__distance">
+            <ui:VisualElement name="distance-icon" class="icon-slot ar-overlay__distance-icon icon--navigation icon-tint--white" />
+            <ui:Label name="distance" text="—" class="ar-overlay__distance-label" />
+        </ui:VisualElement>
+
+        <!-- 왼쪽 아래 방향 표시: 안쪽 그림(방향 선·목적지 점)은 나중에 그린다 -->
+        <ui:VisualElement name="direction-indicator" class="ar-overlay__direction">
+            <ui:VisualElement name="direction-graphic" class="icon-slot ar-overlay__direction-graphic" />
+        </ui:VisualElement>
+
+        <!-- 오른쪽 아래 목적지 카드 -->
+        <ui:VisualElement name="destination-card" class="ar-overlay__destination">
+            <ui:VisualElement class="icon-circle ar-overlay__destination-circle">
+                <ui:VisualElement name="destination-icon" class="icon-slot ar-overlay__destination-icon icon--pin icon-tint--primary" />
+            </ui:VisualElement>
+            <ui:VisualElement class="ar-overlay__destination-text">
+                <ui:Label name="destination-building" text="건물" class="ar-overlay__destination-name" />
+                <ui:Label name="destination-room" text="층 강의실" class="ar-overlay__destination-room" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+</ui:UXML>

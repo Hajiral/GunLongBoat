@@ -1,0 +1,72 @@
+/* 도착 후 시작 화면. 기준: Art/Figma/도착 후 시작.png (412 x 915, 상태바 44px 제외) */
+
+.arrive-start__header {
+    padding-left: var(--space-screen-x);
+    padding-right: var(--space-screen-x);
+}
+
+/* 화면 폭 전체 사진, 시안 y96–445 */
+.arrive-start__photo {
+    height: 350px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.arrive-start__content {
+    align-items: center;
+}
+
+.arrive-start__icon-circle {
+    width: 52px;
+    height: 52px;
+    margin-top: 34px;
+}
+
+.arrive-start__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.arrive-start__title {
+    margin-top: 17px;
+}
+
+.arrive-start__description {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--color-text-body);
+    -unity-text-align: upper-center;
+    -unity-paragraph-spacing: 31px; /* em/100 단위. 14px에서 약 4.3px 추가 → 줄 간격 21px */
+}
+
+/* 카메라 권한 칩: 회색, 모서리 12 */
+.arrive-start__chip {
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+    margin-top: 18px;
+    padding-left: 13px;
+    padding-right: 14px;
+    border-radius: var(--card-radius);
+    background-color: var(--color-surface-muted);
+}
+
+.arrive-start__chip-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.arrive-start__chip-label {
+    font-size: 12px;
+    color: var(--color-text-body);
+}
+
+.arrive-start__spacer {
+    flex-grow: 1;
+}
+
+.arrive-start__button {
+    align-self: stretch;
+    margin-bottom: var(--space-screen-bottom);
+}
